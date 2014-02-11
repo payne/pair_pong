@@ -1,5 +1,5 @@
-function Entity() {
-
+function Entity(game) {
+        this.game = game;
 	// coordinates
 	this.x = 0;
 	this.y = 0;
@@ -21,5 +21,11 @@ Entity.prototype.draw = function ( context ) {
 
 Entity.prototype.update = function ( context ) {
 	this.x += this.xVelocity;
+        // out of bounds?
+        //this.x = Math.min(this.x, this.game.width); // stop on the right
+        // let's bounce...
+        if (this.x > this.game.width) { this.xVelocity *= -1; }
+        if (this.x < 0) { this.xVelocity *= -1; }
 	this.y += this.yVelocity;
 }
+

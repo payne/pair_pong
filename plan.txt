@@ -1,6 +1,9 @@
 Try to follow the video with more checkpoints
-1) Just draw a square on the canvas
-2) Then make the Entity.js class 
-3) Then make it bounce
+DONE: 1) Just draw a square on the canvas
+DONE: 2) Then make the Entity.js class 
+DONE: 3) Then make it bounce
+   DONE: a) game loop that uses the frames per second (fps)
+   DONE:    i) loop over the entities and call update then draw for each
+   DONE: b) Add some code so the entity does not fall off the canvas
 4) Then add padles
-
+5) Add intersection logic so ball bounces off paddles
