@@ -8,6 +8,7 @@ function Entity( game ) {
 	this.height = 20;
 
 	// entities move
+        this.speed = 10;
 	this.xVelocity = 0;
 	this.yVelocity = 0;
 
