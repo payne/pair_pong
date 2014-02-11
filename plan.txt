@@ -1,0 +1,6 @@
+Try to follow the video with more checkpoints
+1) Just draw a square on the canvas
+2) Then make the Entity.js class 
+3) Then make it bounce
+4) Then add padles
+
