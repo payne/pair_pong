@@ -8,7 +8,7 @@ function Entity( game ) {
 	this.height = 20;
 
 	// entities move
-        this.speed = 10;
+	this.speed = 10;
 	this.xVelocity = 0;
 	this.yVelocity = 0;
 
@@ -21,6 +21,7 @@ Entity.prototype.draw = function ( context ) {
 }
 
 Entity.prototype.update = function ( context ) {
+	this.x === this.yVelocity
 	this.x += this.xVelocity;
 	// out of bounds?
 	//this.x = Math.min(this.x, this.game.width); // stop on the right
@@ -39,4 +40,11 @@ Entity.prototype.update = function ( context ) {
 		this.yVelocity *= -1;
 	}
 	this.y += this.yVelocity;
+}
+
+Entity.prototype.intersect = function ( other ) {
+	return this.y + this.height > other.y &&
+		this.y < other.y + other.height &&
+		this.x + this.width > other.x &&
+		this.x < other.x + other.width
 }
